@@ -16,7 +16,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 		<hazelcast.version>3.6.2</hazelcast.version>
-		<jclouds.version>latest-version</jclouds.version>				
+        <jersey2.version>2.19</jersey2.version>
+        <jaxrs.version>2.0.1</jaxrs.version>
 	</properties>
 
 	<dependencies>
@@ -46,20 +47,54 @@
 <!-- for example below: -->
 <!--     compile 'org.apache.cxf:cxf-rt-rs-client:3.0.3' -->
 <!--     compile 'org.apache.cxf:cxf-rt-transports-http-hc:3.0.3' -->
-	    
-	    <dependency>
-	        <groupId>org.apache.cxf</groupId>
-	        <artifactId>cxf-rt-rs-client</artifactId>
-	        <version>3.0.3</version>
-	    </dependency>
 
-	    <dependency>
-	        <groupId>org.apache.cxf</groupId>
-	        <artifactId>cxf-rt-transports-http-hc</artifactId>
-	        <version>3.0.3</version>
-	    </dependency>
 	    
-	            	
+<!-- 	    <dependency> -->
+<!-- 	        <groupId>org.apache.cxf</groupId> -->
+<!-- 	        <artifactId>cxf-rt-rs-client</artifactId> -->
+<!-- 	        <version>3.0.3</version> -->
+<!-- 	    </dependency> -->
+
+<!-- 	    <dependency> -->
+<!-- 	        <groupId>org.apache.cxf</groupId> -->
+<!-- 	        <artifactId>cxf-rt-transports-http-hc</artifactId> -->
+<!-- 	        <version>3.0.3</version> -->
+<!-- 	    </dependency> -->
+	    
+ 
+
+        <!-- JAX-RS -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
+        </dependency>
+        <!-- Jersey 2.19 -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+            <version>${jersey2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>2.4.1</version>
+        </dependency>	            	
         	
 	</dependencies>
 	
